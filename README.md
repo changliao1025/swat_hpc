@@ -64,12 +64,19 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 You may use lower version of gfortran, but it may cause problem if lower than 4.4.
 
 Very liky you will receive several errors and warnings including:
+
 a. Error: Expected a right parenthesis in expression at (1)
+
 b. Error: Unclassifiable statement at (1)
+
 c. Error: Line truncated at (1) [-Werror=line-truncation]
+
 These errors are caused several reasons:
+
 a. Poor programming practices in length control and compiler will complain whenever a long line code is detected. To fix this type of error, you can either break long line into pieces or use compiler flag (not recommended).
+
 b. Dependency relationship not well defined in makefile. The fix is to remove unnecessary dependency in source code (comment out the "include modparm.f" line in the main.f file).
+
 The working version of makefile is uploaded.
 
 
