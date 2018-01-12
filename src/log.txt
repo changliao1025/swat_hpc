@@ -1,0 +1,250 @@
+mkdir -p debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra -ffixed-line-length-132 main.f -o debug32/main.o -J debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  addh.f -o debug32/addh.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  albedo.f -o debug32/albedo.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  allocate_parms.f -o debug32/allocate_parms.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  alph.f -o debug32/alph.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  anfert.f -o debug32/anfert.o -I debug32
+anfert.f:331:41:
+
+           else if (strsp(j) <= 0.75 .and. fminn(ifrt) == 0) then
+                                         1
+Warning: Equality comparison for REAL(4) at (1)
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  apex_day.f -o debug32/apex_day.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  apply.f -o debug32/apply.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  ascrv.f -o debug32/ascrv.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  atri.f -o debug32/atri.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  aunif.f -o debug32/aunif.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  autoirr.f -o debug32/autoirr.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  aveval.f -o debug32/aveval.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  bacteria.f -o debug32/bacteria.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  biofilm.f -o debug32/biofilm.o -I debug32
+biofilm.f:321:0:
+
+          if (algae(jrch) > dcoef * algcon) algae(jrch) = dcoef * algcon
+ ^
+Warning: ‘dcoef’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+biofilm.f:360:0:
+
+       if (rch_dox(jrch) > dcoef * o2con) rch_dox(jrch) = dcoef * o2con
+ ^
+Warning: ‘o2’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra -ffixed-line-length-132 biozone.f -o debug32/biozone.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  bmpfixed.f -o debug32/bmpfixed.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra -ffixed-line-length-132 bmpinit.f -o debug32/bmpinit.o -I debug32
+bmpinit.f:198:13:
+
+          if (ri_fr(i,k)==0) cycle
+             1
+Warning: Equality comparison for REAL(4) at (1)
+bmpinit.f:207:13:
+
+          if (ri_dim(i,k)==0) then
+             1
+Warning: Equality comparison for REAL(4) at (1)
+bmpinit.f:238:13:
+
+          if (ri_iy(i,k)==0) ri_iy(i,k) = iyr
+             1
+Warning: Equality comparison for REAL(4) at (1)
+bmpinit.f:239:13:
+
+          if (ri_im(i,k)==0) ri_im(i,k) = 1   
+             1
+Warning: Equality comparison for REAL(4) at (1)
+bmpinit.f:336:13:
+
+          if (sf_iy(i,k)==0) sf_iy(i,k) = iyr
+             1
+Warning: Equality comparison for REAL(4) at (1)
+bmpinit.f:337:13:
+
+          if (sf_im(i,k)==0) sf_im(i,k) = 1  
+             1
+Warning: Equality comparison for REAL(4) at (1)
+bmpinit.f:338:13:
+
+          if (ft_fsa(i,k)==0) ft_fsa(i,k) = 0.85 
+             1
+Warning: Equality comparison for REAL(4) at (1)
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  bmp_det_pond.f -o debug32/bmp_det_pond.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  bmp_ri_pond.f -o debug32/bmp_ri_pond.o -I debug32
+bmp_ri_pond.f:109:44:
+
+            ksed = min(134.8,41.1 * hpnd ** -0.999)  !decay coefficient, Huber et al. 2006
+                                            1
+Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  bmp_sand_filter.f -o debug32/bmp_sand_filter.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  bmp_sed_pond.f -o debug32/bmp_sed_pond.o -I debug32
+bmp_sed_pond.f:159:44:
+
+            ksed = min(134.8,41.1 * hpnd ** -0.999)  !decay coefficient, Huber et al. 2006
+                                            1
+Warning: Extension: Unary operator following arithmetic operator (use parentheses) at (1)
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  bmp_wet_pond.f -o debug32/bmp_wet_pond.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  buffer.f -o debug32/buffer.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  burnop.f -o debug32/burnop.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  canopyint.f -o debug32/canopyint.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  caps.f -o debug32/caps.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  carbon_new.f -o debug32/carbon_new.o -I debug32
+carbon_new.f:88:10:
+
+       if (sol_cbn(1,j) == 0.) return 
+          1
+Warning: Equality comparison for REAL(4) at (1)
+carbon_new.f:324:12:
+
+         if (resc_hum == 0.) rCNnew = 1000.
+            1
+Warning: Equality comparison for REAL(4) at (1)
+carbon_new.f:325:12:
+
+         if (manc_hum == 0.) mCNnew = 1000.
+            1
+Warning: Equality comparison for REAL(4) at (1)
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra -ffree-line-length-200 carbon_zhang2.f90 -o debug32/carbon_zhang2.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  cfactor.f -o debug32/cfactor.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  chkcst.f -o debug32/chkcst.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  clgen.f -o debug32/clgen.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  clicon.f -o debug32/clicon.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  command.f -o debug32/command.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  conapply.f -o debug32/conapply.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  confert.f -o debug32/confert.o -I debug32
+confert.f:214:0:
+
+               ZZ = X1 *forgn(ifrt) * X10
+ ^
+Warning: ‘ifrt’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  crackflow.f -o debug32/crackflow.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  crackvol.f -o debug32/crackvol.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  curno.f -o debug32/curno.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  dailycn.f -o debug32/dailycn.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  decay.f -o debug32/decay.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  depstor.f -o debug32/depstor.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  distrib_bmps.f -o debug32/distrib_bmps.o -I debug32
+distrib_bmps.f:66:13:
+
+      &      (iyr==sf_iy(sb,kk).and.i_mo>=sf_im(sb,kk))) then
+             1
+Warning: Equality comparison for REAL(4) at (1)
+distrib_bmps.f:149:16:
+
+             if (ri_fr(sb,kk)==0) cycle
+                1
+Warning: Equality comparison for REAL(4) at (1)
+distrib_bmps.f:164:13:
+
+      &      (iyr==ri_iy(sb,kk).and.i_mo>=ri_im(sb,kk))) then
+             1
+Warning: Equality comparison for REAL(4) at (1)
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  dormant.f -o debug32/dormant.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  drains.f -o debug32/drains.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  dstn1.f -o debug32/dstn1.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  ee.f -o debug32/ee.o -I debug32
+ee.f:28:13:
+
+       if (tk + 237.3 /= 0.) then
+             1
+Warning: Inequality comparison for REAL(4) at (1)
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  eiusle.f -o debug32/eiusle.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  enrsb.f -o debug32/enrsb.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  erfc.f -o debug32/erfc.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  estimate_ksat.f -o debug32/estimate_ksat.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  etact.f -o debug32/etact.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  etpot.f -o debug32/etpot.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  expo.f -o debug32/expo.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  fert.f -o debug32/fert.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  filter.f -o debug32/filter.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  filtw.f -o debug32/filtw.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  finalbal.f -o debug32/finalbal.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  gcycl.f -o debug32/gcycl.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  getallo.f -o debug32/getallo.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  grass_wway.f -o debug32/grass_wway.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  graze.f -o debug32/graze.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  grow.f -o debug32/grow.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  gwmod.f -o debug32/gwmod.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  gwmod_deep.f -o debug32/gwmod_deep.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  gwnutr.f -o debug32/gwnutr.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  gw_no3.f -o debug32/gw_no3.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  h2omgt_init.f -o debug32/h2omgt_init.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  harvestop.f -o debug32/harvestop.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  harvgrainop.f -o debug32/harvgrainop.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  harvkillop.f -o debug32/harvkillop.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  header.f -o debug32/header.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  headout.f -o debug32/headout.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  hhnoqual.f -o debug32/hhnoqual.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  hhwatqual.f -o debug32/hhwatqual.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  hmeas.f -o debug32/hmeas.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  hruaa.f -o debug32/hruaa.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  hruallo.f -o debug32/hruallo.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  hruday.f90 -o debug32/hruday.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  hrumon.f -o debug32/hrumon.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  hrupond.f -o debug32/hrupond.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  hrupondhr.f -o debug32/hrupondhr.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  hruyr.f -o debug32/hruyr.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  hydroinit.f -o debug32/hydroinit.o -I debug32
+hydroinit.f:172:11:
+
+    if(tp==0) tp = 1
+           1
+Warning: Equality comparison for REAL(4) at (1)
+hydroinit.f:173:11:
+
+    if(tb==tp) tb = tb + 1
+           1
+Warning: Equality comparison for REAL(4) at (1)
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  icl.f -o debug32/icl.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  impndaa.f -o debug32/impndaa.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  impndday.f -o debug32/impndday.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  impndmon.f -o debug32/impndmon.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  impndyr.f -o debug32/impndyr.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  impnd_init.f -o debug32/impnd_init.o -I debug32
+impnd_init.f:148:12:
+
+         if (pnd_fr(j) /= 0.) then
+            1
+Warning: Inequality comparison for REAL(4) at (1)
+impnd_init.f:226:12:
+
+         if (wet_fr(j) /= 0.) then
+            1
+Warning: Inequality comparison for REAL(4) at (1)
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  irrigate.f -o debug32/irrigate.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  irrsub.f -o debug32/irrsub.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  irr_rch.f -o debug32/irr_rch.o -I debug32
+irr_rch.f:243:10:
+
+       if (wtrin /= rtwtr .and. wtrin > 0.01) then
+          1
+Warning: Inequality comparison for REAL(4) at (1)
+irr_rch.f:231:0:
+
+      *       hru_km(j), "         ",  " AUTOIRR", phubase(k), phuacc(k),
+ ^
+Warning: ‘j’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  irr_res.f -o debug32/irr_res.o -I debug32
+irr_res.f:161:0:
+
+      *       hru_km(j), "         ",  " AUTOIRR", phubase(k), phuacc(k),
+ ^
+Warning: ‘j’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  jdt.f -o debug32/jdt.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  killop.f -o debug32/killop.o -I debug32
+killop.f:167:0:
+
+            resnew_n = ff1 * (plantn(j) - yieldn)         
+ ^
+Warning: ‘ff1’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+killop.f:277:0:
+
+            resnew_n = rtfr(l) *ff2 * (plantn(j) - yieldn)       
+ ^
+Warning: ‘ff2’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  lakeq.f -o debug32/lakeq.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  latsed.f -o debug32/latsed.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  layersplit.f -o debug32/layersplit.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  lwqdef.f -o debug32/lwqdef.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  NCsed_leach.f90 -o debug32/ncsed_leach.o -I debug32
+gfortran  -c -fmessage-length=0 -funderscoring -fbacktrace -ffpe-trap=invalid,zero,overflow -O0 -g -fbounds-check -Wextra  ndenit.f -o debug32/ndenit.o -I debug32
+ndenit.f:10:72: Error: Expected a right parenthesis in expression at (1)
+make: *** [debug32/ndenit.o] Error 1
