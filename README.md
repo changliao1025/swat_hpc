@@ -109,7 +109,7 @@ https://cmake.org/Wiki/CMake_FAQ#Out-of-source_build_trees
 
 But the relative path will be considered. An easy solution is to use the {CMAKE_CURRENT_SOURCE_DIR} variable.
 
-To fix the same long length constrain, I used the compiling flas directly.
+To fix the same long length constraint, I used the compiling flags directly.
 
 Environmental settings:
 cmake --version
