@@ -42,4 +42,35 @@ https://cmake.org/documentation/.
 But I prefer to introduce you a much simple exmaple of it at 
 http://derekmolloy.ie/hello-world-introductions-to-cmake/
 
+6. Let's start with the easy one, based on the makefile provided from:
+https://github.com/crazyzlj/SWAT/blob/master/posts_by_zhiqiang/Makefile
+
+Environmental settings:
+make --version
+GNU Make 3.81
+Copyright (C) 2006  Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+This program built for x86_64-redhat-linux-gnu
+
+gfortran --version
+GNU Fortran (GCC) 6.1.0
+Copyright (C) 2016 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+You may use lower version of gfortran, but it may cause problem if lower than 4.4.
+
+Very liky you will receive several errors and warnings including:
+a. Error: Expected a right parenthesis in expression at (1)
+b. Error: Unclassifiable statement at (1)
+c. Error: Line truncated at (1) [-Werror=line-truncation]
+These errors are caused several reasons:
+a. Poor programming practices in length control and compiler will complain whenever a long line code is detected. To fix this type of error, you can either break long line into pieces or use compiler flag (not recommended).
+b. Dependency relationship not well defined in makefile. The fix is to remove unnecessary dependency in source code (comment out the "include modparm.f" line in the main.f file).
+The working version of makefile is uploaded.
+
+
 
