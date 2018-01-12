@@ -85,7 +85,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 You may use lower version of gfortran, but it may cause problem if lower than 4.4.
 
-Very liky you will receive several errors and warnings including:
+Very likely you will receive several errors and warnings including:
 
 a. Error: Expected a right parenthesis in expression at (1)
 
