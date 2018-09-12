@@ -116,3 +116,8 @@ cmake --version
 cmake version 2.8.12.2
 
 The working version of the CMakeLists file is uploaded.
+
+I have tested the source code under both MacOX 10.13.6 and Linux with GNU. If you have difficulty in compling the program, please send me an email.
+Most likely you will have to specify the compiler if cmake complains. You can try this:
+https://cmake.org/pipermail/cmake/2006-October/011638.html
+You can also add "set(CMAKE_VERBOSE_MAKEFILE ON)" into the CMakeLists.txt to obatin more compiling information.
