@@ -122,4 +122,4 @@ Most likely you will have to specify the compiler if cmake complains. You can tr
 https://cmake.org/pipermail/cmake/2006-October/011638.html
 You can also add "set(CMAKE_VERBOSE_MAKEFILE ON)" into the CMakeLists.txt to obatin more compiling information.
 
-If you have question, please send email to climate@changliao.us
+If you have question, please send email to changliao.climate@gmail.com
